@@ -45,6 +45,10 @@
 // const timeScreenP = document.querySelector(".timeScreenP");
 // timeScreen.style.display = "none";
 
+
+
+
+
 var c = document.createElement("canvas");
 c.classList.add("gameScreen");
 var ctx = c.getContext("2d");
@@ -101,8 +105,8 @@ var Player = function () {
             this.rot -= (this.rot - angle) * 0.60;
             this.rSpeed = this.rSpeed - (angle - this.rot);
         }
-        this.rSpeed += (k.ArrowLeft - k.ArrowRight) * 0.05;
-        this.rot -= this.rSpeed * 0.04;
+        this.rSpeed += (k.ArrowLeft - k.ArrowRight) * 0.02;
+        this.rot -= this.rSpeed * 0.01;
         if (this.rot > Math.PI) this.rot = -Math.PI;
         if (this.rot < -Math.PI) this.rot = Math.PI;
         ctx.save();
@@ -151,7 +155,7 @@ function loop() {
     if (player.x < 0)
     {  
         displaytime();
-        
+
     }
     requestAnimationFrame(loop);
 } 
@@ -215,7 +219,8 @@ function updateTime(){
 
 function displaytime(){
     timeScreen.style.display = "block";
-    info.style.display = "none";
+    // info.style.display = "none";
+    info.innerText = "Game Over";
     timeScreenP.innerText = "Your Highest Time is :";
     clearInterval(timmer);
 }

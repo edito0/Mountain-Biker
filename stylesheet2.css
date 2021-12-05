@@ -14,6 +14,7 @@ body{
     background-attachment: fixed;
     background-position:center;
     background-size: 100%;
+    overflow-x: hidden;
 }
 
 /* @media screen and (max-width: 420px){
@@ -114,6 +115,7 @@ main{
     display: flex;
     justify-content: center;
     display: grid;
+    grid-gap: 10px;
     grid-template-columns: repeat(2,75px);
 }
 
@@ -138,7 +140,7 @@ main{
 
 
 .guide div{
-    background-color: rgb(0,0,0,0.1);
+    background-color: rgb(0,0,0,0.12);
 }
 
 .guide div i{
@@ -157,7 +159,7 @@ main{
 
 /* For About Us section */
 .aboutInfo{
-    margin: 20px;
+    padding: 20px;
     text-align: center;
     font-size: 1.5rem;
     font-family: 'Quicksand', sans-serif;
@@ -166,16 +168,57 @@ main{
 
 .aboutImgContainer{
     width: 100%;
-    display: flex;
+    height: 270px;
+    margin: 10px 0px 0px 0px;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
+    position: relative;
 }
+
 
 .aboutImg{
     width: 270px;
-    margin: 10px auto;
-    transform: rotate(-9deg);
+    position: absolute;
+    animation-name: bike;
+    bottom: 0px;
+    animation-duration: 3.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    overflow: hidden;
+    transform-origin: 200px 90px  ;
 }
+
+.aboutImg2{
+    width: 200px;
+    position: absolute;
+    overflow: hidden;
+    right: 6px;
+    bottom: 0px;
+
+}
+
+
+.road{
+    height: 6px;
+    width: 100%;
+    background-color: black;
+    margin-bottom: 10px;
+}
+
+@keyframes bike {
+    from{
+        left: -270px;
+        transform: rotate(0deg);
+    }
+    to{
+        left:101%;
+        transform: rotate(20deg)
+
+    }
+  }
+
+
 footer{
     height: 30px;
     font-family: 'Quicksand', sans-serif;
@@ -186,6 +229,111 @@ footer{
 
     text-align: center;
     width: 100vw;
+
+    letter-spacing: 2px;
     
 }
+
+.aboutMe{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutMe a{
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgb(0, 0, 0);
+    border: 2PX solid black;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bolder;
+    border-radius: 7px;
+    margin: 20px 0px 5px 0px;
+    padding: 10px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s linear;
+    transition: color 0.5s linear;
+
+}
+
+.aboutMe a:hover{
+    background-color: black;
+    color: rgb(255, 255, 255);
+}
+
+.arrangement{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin:0px 0px 0px 50px;
+}
+
+.iControl{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90px;
+    width: 60px;
+    background-color: rgba(0, 0, 0, 0.12);
+    color: rgb(0, 0, 0);
+    font-size:  1.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.iControl a{
+    transition: color 0.3s ease;
+    color: rgb(0, 0, 0); 
+}
+
+.iControl a:hover{
+    color: rgb(255, 255, 255); 
+}
+
+.iControl:hover{
+    background-color:rgba(0, 0, 0, 0.3) ;
+    color: white;
+}
+
+.rt{
+    border-radius: 9px 9px 0px 0px;
+}
+
+.rb{ 
+    border-radius: 0px 0px 9px 9px;
+}
+
+
+@media only screen and (max-width:400px) {
+    .aboutImg2{
+        display: none;
+    }
+    
+    .arrangement{
+        flex-direction: column-reverse;
+    }
+
+    .links{
+        flex-direction: row;
+        margin: 10px 0px 15px 0px ;
+    }
+    
+    .rt{
+        border-radius: 9px 0px 0px 9px;
+    }
+
+    .rb{
+        border-radius: 0px 9px 9px 0px;
+    }
+    
+}
+
 
