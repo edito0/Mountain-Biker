@@ -1,0 +1,209 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* for background image  */
+body{
+    /* background-image: url('img/bg2.png') no-repeat center center/cover; */
+    box-sizing: border-box;
+    background: linear-gradient(180deg,#65DDEF,#C9F6FF), url('img/bg2.png');
+    background-blend-mode: multiply;
+    background-origin: content-box;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position:bottom;
+    background-size: 100%;
+}
+
+/* @media screen and (max-width: 420px){
+    body{transform:rotate(90deg)};
+} */
+
+#navbar{
+    display: flex;
+    position: relative;
+    align-items: center; 
+    height:4rem;
+    width: 100vw;
+    /* background-color: #38a8aa; */
+}
+
+
+.logo{
+    margin: 10px 10px;
+    
+}
+
+.logo img{
+    margin: 10px 10px;
+    height: 51px;
+}
+
+/* for black strip behind navigator */
+#navbar::before{
+    content: "";
+    background-color: black;
+    opacity: 0.1; 
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+#navbar ul{
+    display: flex;  
+}
+
+#navbar ul li{
+    font-family: 'Quicksand', sans-serif;
+    list-style: none;
+    font-size: 1.4rem;
+ }
+
+#navbar ul li a{
+    color: white;
+    display: block;
+    padding: 3px 11px ;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.4s ease;
+
+}
+
+#navbar ul li a:hover{
+    /* color:rgb(214, 214, 214); */
+    color: black;
+    text-decoration: underline;
+    text-underline-position: below;
+    text-underline-offset: 5px;
+}
+
+/* for game title */
+
+main{
+    
+    min-height: calc(100vh - 4rem - 45px);
+    width: 100%;
+}
+
+.gametitle{     
+    /* display: flex; */
+    padding: 4rem 1rem;
+    /* height:10rem; */
+    /* width: 25rem; */
+    /* margin: auto; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    
+}
+
+.gametitle h1{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 5.6rem;
+    font-style:oblique;
+    text-align: center;
+    line-height: 5.6rem;
+    color: white;
+    text-shadow: 4px 4px black;
+    transform: rotate(-5deg);
+    
+}
+
+
+/*  for choose section */
+#choosediv{
+    display: flex;
+    height: 7rem;  
+    width: 100%; 
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* for css of button (btn)---Play and vehicle */
+.btn{
+   
+    cursor: pointer;
+	position: relative;
+	padding: 1.5rem 3.2rem;
+	border-radius: 3.75rem;
+	line-height: 2.5rem;
+	font-size: 3rem;
+	font-weight: 600;
+	
+	border: 1px solid #ac4805 ;
+	background-image: linear-gradient(-180deg, #ff9249 0%, #ff6600 100%);
+	box-shadow: 0 1rem 1.25rem 0 rgba(33, 33, 34, 0.5),
+							0 -0.25rem 1.5rem rgba(110, 15, 155, 1) inset,
+							0 0.75rem 0.5rem #ff9249  inset,
+							0 0.25rem 0.5rem 0 #ff9249  inset;
+
+    transition: all 0.1s ease;
+}
+
+.btn a {
+
+    color: transparent;
+	background-image: linear-gradient(0deg, #e2e2e2 0%, #FEFAFD 100%);
+	-webkit-background-clip: text;
+	background-clip: text;
+    font-family: 'Quicksand', sans-serif;
+	filter: drop-shadow(0 2px 2px hsla(290, 100%, 20%, 1));
+}
+    
+.btn::before {
+	content: "";
+	display: block;
+	height: 0.25rem;
+	position: absolute;
+	top: 0.5rem;
+	left: 50%;
+	transform: translateX(-50%);
+	width: calc(100% - 7.5rem);
+	background: #fff;
+	border-radius: 100%;
+	
+	opacity: 0.7;
+	background-image: linear-gradient(-270deg, rgba(255,255,255,0.00) 0%, #FFFFFF 20%, #FFFFFF 80%, rgba(255,255,255,0.00) 100%);
+}
+
+.btn::after {
+	content: "";
+	display: block;
+	height: 0.25rem;
+	position: absolute;
+	bottom: 0.75rem;
+	left: 50%;
+	transform: translateX(-50%);
+	width: calc(100% - 7.5rem);
+	background: #fff;
+	border-radius: 100%;
+	
+	filter: blur(1px);
+	opacity: 0.05;
+	background-image: linear-gradient(-270deg, rgba(255,255,255,0.00) 0%, #FFFFFF 20%, #FFFFFF 80%, rgba(255,255,255,0.00) 100%);
+}
+
+.btn:hover{
+    font-size: 3.1rem;
+}
+
+
+
+footer{
+    height: 30px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    color: white;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    
+    text-align: center;
+    width: 100vw;
+
+    letter-spacing: 2px;
+    
+}
+

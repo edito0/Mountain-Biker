@@ -1,0 +1,171 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* padding: 21px; */
+
+    /* background-image: url('img/bg2.png') no-repeat center center/cover; */
+    box-sizing: border-box;
+    background: linear-gradient(180deg,#65DDEF,#C9F6FF);
+    background-origin: content-box;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position:center;
+    background-size: 100%;
+ 
+}
+
+#navbar{
+    display: flex;
+    position: relative;
+    align-items: center; 
+    height:4rem;
+    width: 100vw;
+    /* background-color: #38a8aa; */
+}
+
+
+.logo{
+    margin: 10px 10px;
+    
+}
+
+.logo img{
+    margin: 10px 10px;
+    height: 51px;
+}
+
+/* for black strip behind navigator */
+#navbar::before{
+    content: "";
+    background-color: black;
+    opacity: 0.1; 
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+#navbar ul{
+    display: flex;  
+}
+
+#navbar ul li{
+    font-family: 'Quicksand', sans-serif;
+    list-style: none;
+    font-size: 1.4rem;
+ }
+
+#navbar ul li a{
+    color: white;
+    display: block;
+    padding: 3px 11px ;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.4s ease;
+
+}
+
+#navbar ul li a:hover{
+    color: black;
+    text-decoration: underline;
+    text-underline-position: below;
+    text-underline-offset: 5px;
+}
+
+
+/* for game title */
+
+main{
+    
+    min-height: calc(100vh - 4rem - 50px);
+    width: 100%;
+}
+
+.gametitle{     
+    /* display: flex; */
+    padding: 4rem 1rem;
+    /* height:10rem; */
+    /* width: 25rem; */
+    /* margin: auto; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    
+}
+
+.gametitle h1{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 5.6rem;
+    font-style:oblique;
+    text-align: center;
+    line-height: 5.6rem;
+    color: white;
+    text-shadow: 4px 4px black;
+    transform: rotate(-5deg);
+    
+}
+
+
+.gameScreen{
+    border: 10px solid black;
+    margin: 9px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info{
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px;
+}
+
+.time{
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    font-size: 40px;
+    letter-spacing: 5px;
+}
+
+.timeScreen{
+    padding: 9px;
+    margin: 5px;
+    background-color: red;
+    border-radius: 5px;
+}
+
+.restart{
+    text-align: center;
+    padding: 3px 6px ;
+    width: 10px;
+    border-radius: 5px;
+    margin: 0px 0px 0px 60px;
+    border: 1px solid black;
+    font-weight: bold;
+    background-color: rgb(0,0,0,0.1);
+    font-family:  sans-serif;
+    color: white;
+    text-decoration: none;
+}
+
+.timeScreenP{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 5px 0px 0px 0px;
+}
+
+/* @media only screen and (max-width: 400px) {
+    body {
+      transform: rotate(90deg);
+    }
+  } */
